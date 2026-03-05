@@ -7,7 +7,10 @@
       "Bash(grep:*)",
       "Bash(rm:*)",
       "Bash(bundle exec:*)",
-      "Bash(echo:*)"
+      "Bash(echo:*)",
+      "Bash(magick:*)",
+      "Bash(python:*)",
+      "Bash(ls:*)"
     ]
   }
 }

@@ -2,22 +2,27 @@
 title: About
 layout: about
 hero:
-  title: About Me
-  subtitle: Learn more about the mission of this blog
-  image_header: /assets/img/michelleheader.png
+  title: About This Blog
+  subtitle: Peakboard example projects, tips, and a sprinkle of dashboard wisdom
+  image_header: /assets/img/header.jpg
 ---
 
-## Dear visitor!
+## Namaste, dear visitor!
 
-It's nice to have you here, but please make sure to understand:
+Welcome to **Peakboard Guru** — your go-to collection of real-world Peakboard example projects. Whether you're looking for inspiration for your next factory dashboard, a waiting room display, or a fermentation monitor for your craft brewery (yes, really), you've come to the right place.
 
-1. This site is not affiliated with the Peakboard company. If you're looking of an official documentation [here we go](https://help.peakboard.com)
-2. The articles here are provided 'as they are'. No warranty! If you find any mistakes, please let me know. 
-3. The articles here refer to the software version of the date when the article was published. Certain statements, screenshots, hacks, functions, etc might not work anymore with later versions or there might be a solution available so that a hack is not necessary anymore.
-4. If you have any questions or requests for new articles, please let me know: Michelle at whiterabbit.tw.
-5. For any questions around the articles feel free to use the [Peakboard reddit](https://www.reddit.com/r/Peakboard/).
+Every article comes with a downloadable PBMX file so you can open it in Peakboard Designer and start tinkering right away. No theory lectures, no 47-page whitepapers — just working examples you can learn from and adapt to your own use case.
 
-Love, Michelle
+### A few things to keep in mind
 
-![image]({{ site.baseurl }}/assets/img/michelle.png)
+1. This site is **not** affiliated with Peakboard GmbH. For official documentation, head over to [help.peakboard.com](https://help.peakboard.com).
+2. All projects are provided as-is. If something doesn't work, it's probably not a bug — it's a *surprise feature*.
+3. Articles refer to the Peakboard Designer version available at the time of writing. Things evolve, buttons move, and occasionally a hack becomes unnecessary because the product team actually listens.
+4. Got questions, ideas, or complaints about the Guru's fashion choices? Reach out to Frank or visit the [Peakboard subreddit](https://www.reddit.com/r/Peakboard/).
+
+May your dashboards always be real-time and your data sources never timeout.
+
+Cheers, Frank
+
+![The Peakboard Guru]({{ site.baseurl }}/assets/img/guru.png)
 
