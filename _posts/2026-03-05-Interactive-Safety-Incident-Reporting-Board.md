@@ -2,7 +2,7 @@
 layout: post
 title: "Interactive Safety Incident Reporting Board"
 date: 2026-03-05 00:00:00 +0000
-tags: peakboard
+tags: production
 image: /assets/2026-03-05-09-21-51/title.png
 bg_alternative: true
 description: "Interactive Safety Incident Reporting Board - A Peakboard digital signage dashboard project."
@@ -26,9 +26,6 @@ What makes this board truly powerful is the interactive reporting panel on the r
 A scrolling list at the bottom shows recent incidents with color-coded severity, keeping the entire team informed in real time. Rotating safety tips reinforce best practices throughout the shift.
 
 The result is a safety culture that lives and breathes on the shop floor — not just in management meetings. Teams stay informed, reporting becomes effortless, and leadership gets the data they need to act before small issues become serious injuries.
-
-[download the PBMX]({{ site.baseurl }}/assets/2026-03-05-09-21-51/Peakboard.pbmx)
-
 
 ## Video
 

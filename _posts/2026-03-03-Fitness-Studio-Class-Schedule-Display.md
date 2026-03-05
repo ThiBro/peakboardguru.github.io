@@ -2,7 +2,7 @@
 layout: post
 title: "Fitness Studio Class Schedule Display"
 date: 2026-03-03 00:00:00 +0000
-tags: peakboard
+tags: fitness
 image: /assets/2026-03-03-16-34-54/title.png
 bg_alternative: true
 description: "Fitness Studio Class Schedule Display - A Peakboard digital signage dashboard project."
@@ -27,7 +27,7 @@ At the bottom, a bar chart visualizes the occupancy rate for each class as a per
 
 The sporty design uses a dark background with neon green accents, matching the energetic atmosphere of a gym environment. Staff benefit too — fewer questions at the front desk, and trainers can see at a glance how their classes are filling up.
 
-The result: a single screen that keeps everyone informed, reduces front-desk inquiries, and adds a modern, professional touch to any fitness studio. You can [download the PBMX]({{ site.baseurl }}/assets/2026-03-03-16-34-54/Peakboard.pbmx) and try it yourself.
+The result: a single screen that keeps everyone informed, reduces front-desk inquiries, and adds a modern, professional touch to any fitness studio.
 
 
 ## Video

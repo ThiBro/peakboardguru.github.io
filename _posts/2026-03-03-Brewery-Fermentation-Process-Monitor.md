@@ -2,7 +2,7 @@
 layout: post
 title: "Brewery Fermentation Process Monitor"
 date: 2026-03-03 00:00:00 +0000
-tags: peakboard
+tags: food-and-beverage
 image: /assets/2026-03-03-16-55-55/title.png
 bg_alternative: true
 description: "Brewery Fermentation Process Monitor - A Peakboard digital signage dashboard project."
@@ -26,9 +26,6 @@ Three key metrics — pH level, original gravity in degrees Plato, and residual 
 The warm, rustic color scheme with dark brown tones and amber accents fits naturally into the brewery environment, ensuring the display feels like part of the production floor rather than a foreign IT installation.
 
 The result is fewer manual checks, faster reaction to anomalies, and a complete digital record for every batch — giving brewmasters more control and more confidence in every fermentation cycle.
-
-[download the PBMX]({{ site.baseurl }}/assets/2026-03-03-16-55-55/Peakboard.pbmx)
-
 
 ## Video
 

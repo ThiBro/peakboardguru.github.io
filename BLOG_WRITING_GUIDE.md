@@ -65,7 +65,7 @@ downloads:
 | `bg_alternative` | `true` = light hero box style. Use together with `image_header` (modern style) |
 | `description` | Shown below title in hero area and used for SEO meta tags |
 | `read_more_links` | List of `{name, url}` shown in sidebar under "Related Links" |
-| `downloads` | List of `{name, url}` shown in sidebar under "Downloads" |
+| `downloads` | List of `{name, url}` rendered as a Guru download button image at the top of the right sidebar. Do NOT add download links in the article body — the button is generated automatically from this field |
 
 ### Post Template
 
@@ -74,7 +74,7 @@ downloads:
 layout: post
 title: Article Title - With Subtitle
 date: 2026-03-03 00:00:00 +0000
-tags: peakboard
+tags: fitness
 image: /assets/2026-03-03-14-30-00/title.png
 image_header: /assets/2026-03-03-14-30-00/title_landscape.png
 bg_alternative: true
@@ -89,7 +89,23 @@ downloads:
 
 ## 3. Tags
 
-Tags are space-separated in front matter. Use `peakboard` as the default tag for all articles. You can add additional descriptive tags as needed (e.g. `peakboard ui`, `peakboard api`). There are no category pages — tags are purely for metadata and search.
+Tags are space-separated in front matter. Use an **industry-specific** tag that best describes the use case. Available tags:
+
+| Tag | Industry |
+|-----|----------|
+| `production` | Manufacturing, factory floors, assembly lines |
+| `logistics` | Warehousing, shipping, supply chain |
+| `hotel` | Hotels, hospitality |
+| `gastronomy` | Restaurants, catering, food service |
+| `retail` | Shops, supermarkets, point of sale |
+| `healthcare` | Hospitals, clinics, dental practices |
+| `fitness` | Gyms, sports studios |
+| `food-and-beverage` | Breweries, food production, beverages |
+| `office` | Office environments, meeting rooms |
+| `energy` | Energy, utilities, sustainability |
+| `transportation` | Public transit, airports, fleet management |
+
+You can use multiple tags if applicable (e.g. `production logistics`). The first tag is used as the primary category shown on the article card. Add new tags as needed when no existing tag fits — keep them lowercase, use hyphens for multi-word tags.
 
 ---
 
@@ -204,6 +220,7 @@ The URL preserves the exact filename casing (not lowercased). There is no date i
 - **Structure:** Problem → Setup → Step-by-step walkthrough → Result/Conclusion
 - **Screenshots:** Heavy use of annotated screenshots showing each configuration step
 - **Practical focus:** Every article typically includes a downloadable `.pbmx` sample project
+- **Download button:** Do NOT add download links as text in the article body. The Guru download button image is rendered automatically in the right sidebar from the `downloads` front matter field
 - **Cross-linking:** Reference related articles and categories using internal links
 
 ---
@@ -215,7 +232,7 @@ The URL preserves the exact filename casing (not lowercased). There is no date i
 layout: post
 title: Gym Class Schedule Display - Building a Fitness Studio Dashboard with Peakboard
 date: 2026-03-03 00:00:00 +0000
-tags: peakboard
+tags: fitness
 image: /assets/2026-03-03-14-30-00/title.png
 bg_alternative: true
 description: "Build a dynamic gym class schedule display with Peakboard."
@@ -256,3 +273,4 @@ The finished dashboard provides an at-a-glance overview of the schedule.
 - [ ] Internal links use `/Title-Slug.html` format (no date in URL)
 - [ ] Images are in `/assets/YYYY-MM-DD-HH-MM-SS/` folder
 - [ ] Article ends with a `## Result` or `## Conclusion` section
+- [ ] Download link is in `downloads:` front matter only (not as text in the article body)

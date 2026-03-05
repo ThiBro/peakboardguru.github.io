@@ -2,7 +2,7 @@
 layout: post
 title: "Dental Practice Waiting Room Display"
 date: 2026-03-03 00:00:00 +0000
-tags: peakboard
+tags: healthcare
 image: /assets/2026-03-03-00-00-00/title.png
 bg_alternative: true
 description: "Dental Practice Waiting Room Display - A Peakboard digital signage dashboard project."
@@ -26,5 +26,3 @@ At the top, the practice name and a friendly welcome message are shown alongside
 The color scheme uses light blues and whites to create a calm, clinical yet friendly atmosphere — exactly the kind of environment a dental practice wants to project. Staff benefit too: instead of fielding constant questions about wait times, the display handles that communication automatically. The health tips also serve as a subtle way to educate patients about dental hygiene and preventive care.
 
 The result is a more relaxed waiting room, better-informed patients, and a more professional appearance for the practice — all from a single screen that runs independently throughout the day.
-
-[download the PBMX]({{ site.baseurl }}/assets/2026-03-03-00-00-00/Peakboard.pbmx)
