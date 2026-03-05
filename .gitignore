@@ -1,0 +1,9 @@
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+node_modules
+
+
+assets/2026-03-11/MyBusinessCentralPlayground.py

@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+    {% include head.html %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body class="font-sans flex flex-col min-h-full bg-stone-100 dark:bg-blackground">
+    {% include header.html %}
+    <main class="flex-auto w-full">
+        {{ content }}
+    </main>
+    {% include footer.html %}
+    {% include sidemenu-date-script.html %}
+</body>
+</html>

@@ -1,0 +1,39 @@
+title: Peakboard Guru
+description: "Blog about Peakboard projects, tips, tricks and hacks"
+baseurl: ""
+url: "https://peakboard-projects.com"
+permalink: /:title:output_ext
+port: 4001
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    default_lang: html
+    css_class: 'syntax'
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-sitemap
+
+# Exclude from processing.
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - EDITOR_GUIDE.md
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - package.json
+  - package-lock.json
+  - postcss.config.js
+  - tailwind.config.js
+  - google8190dc559f0c8f12.html

@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(winget install:*)",
+      "Bash(export:*)",
+      "Bash(curl:*)",
+      "Bash(grep:*)",
+      "Bash(rm:*)",
+      "Bash(bundle exec:*)",
+      "Bash(echo:*)"
+    ]
+  }
+}

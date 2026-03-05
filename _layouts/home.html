@@ -1,0 +1,33 @@
+---
+layout: base
+---
+
+<!-- Hero Feature Block - Full Width -->
+{%- assign featured_post = site.posts | first -%}
+{% if featured_post %}
+<div class="mb-16">
+  {% include hero-feature.html post=featured_post %}
+</div>
+{% endif %}
+
+<!-- Page Wrapper with Max Width -->
+<div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+  <!-- All Articles Grid -->
+  <section class="py-8 -mx-6 lg:-mx-8 px-6 lg:px-8">
+    <div class="mb-8 flex items-center">
+      <h2 class="font-heading text-2xl md:text-3xl font-bold text-gray-900 dark:text-white uppercase tracking-tight">
+        All Articles
+      </h2>
+      <div class="ml-6 flex-1 h-0.5 bg-gradient-to-r from-accent-cyan/50 to-transparent"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-white dark:bg-blackground">
+      {%- for post in site.posts -%}
+        {%- if post.url == featured_post.url -%}{%- continue -%}{%- endif -%}
+        {% include article-card-magazine-clean.html post=post %}
+      {%- endfor -%}
+    </div>
+  </section>
+
+</div>

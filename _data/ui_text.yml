@@ -1,0 +1,11 @@
+site:
+  nav:
+    back_to_home: "back to home"
+    side_menu_home: "Home"
+    side_menu_about: "About"
+    side_menu_archive: "Archive"
+  side_menu:
+    title: "What is this blog?"
+    text: "Peakboard Guru is a blog about various Peakboard projects, tips, tricks and hacks."
+    contact_title: "Contact"
+    contact_text: "If you have any questions, feel free to get in touch."
