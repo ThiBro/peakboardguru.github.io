@@ -1,5 +1,5 @@
 title: Peakboard Guru
-description: "Blog about Peakboard projects, tips, tricks and hacks"
+description: "Peakboard Guru shows you fancy Peakboard projects"
 baseurl: "/peakboardguru.github.io"
 url: "https://thibro.github.io"
 permalink: /:title:output_ext
