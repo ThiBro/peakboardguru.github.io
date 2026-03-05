@@ -24,7 +24,7 @@ layout: base
 
                     {% if page.tags and page.tags.size > 0 %}
                     <a href="{{ page.tags[0] | slugify | prepend: '/category/' | relative_url }}"
-                       class="inline-flex items-center px-4 py-1.5 mb-4 text-xs font-bold uppercase tracking-widest bg-accent-cyan text-black w-fit hover:text-white transition-colors">
+                       class="inline-flex items-center px-4 py-1.5 mb-4 text-xs font-bold uppercase tracking-widest bg-accent-cyan text-black w-fit hover:text-white transition-colors rounded-full">
                         {{ page.tags[0] }}
                     </a>
                     {% endif %}

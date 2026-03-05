@@ -30,7 +30,7 @@ layout: base
       </div>
       {% if def.see_also %}
         <a href="{{ def.see_also.url | relative_url }}"
-           class="inline-flex items-center px-5 py-2.5 bg-gray-900 dark:bg-white text-white dark:text-black font-bold text-sm uppercase tracking-wider hover:bg-accent-cyan hover:text-black dark:hover:bg-accent-cyan transition-colors">
+           class="inline-flex items-center px-5 py-2.5 bg-gray-900 dark:bg-white text-white dark:text-black font-bold text-sm uppercase tracking-wider hover:bg-accent-cyan hover:text-black dark:hover:bg-accent-cyan transition-colors rounded-full">
           <i class="fas fa-link mr-2"></i>
           {{ site.data.ui_text.learning.page.see_also_prefix }} {{ def.see_also.text }}
         </a>
@@ -85,7 +85,7 @@ layout: base
 
   {% assign initial_count = 12 %}
   <div data-load-more-container data-load-more-initial="{{ initial_count }}" data-load-more-step="12">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-white dark:bg-blackground">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {% for post in posts_to_show %}
         <div data-load-more-item {% if forloop.index > initial_count %}data-load-more-hidden="true"{% endif %}>
           {% include article-card-magazine-clean.html post=post %}
@@ -98,7 +98,7 @@ layout: base
         <button type="button"
                 data-load-more-button
                 data-load-more-label="{{ site.data.ui_text.pagination.load_more }}"
-                class="inline-flex items-center justify-center px-8 py-4 bg-gray-900 dark:bg-white text-white dark:text-black font-bold text-sm uppercase tracking-wider hover:bg-accent-cyan hover:text-black dark:hover:bg-accent-cyan transition-colors">
+                class="inline-flex items-center justify-center px-8 py-4 bg-gray-900 dark:bg-white text-white dark:text-black font-bold text-sm uppercase tracking-wider hover:bg-accent-cyan hover:text-black dark:hover:bg-accent-cyan transition-colors rounded-full">
           {{ site.data.ui_text.pagination.load_more }}
         </button>
       </div>

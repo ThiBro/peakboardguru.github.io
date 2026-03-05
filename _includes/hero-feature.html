@@ -19,7 +19,7 @@
     <!-- Category Chip -->
     {% if featured.tags and featured.tags.size > 0 %}
     <a href="{{ featured.tags[0] | slugify | prepend: '/category/' | relative_url }}"
-       class="inline-flex items-center px-4 py-1.5 mb-4 text-xs font-bold uppercase tracking-widest bg-accent-cyan text-black w-fit hover:text-white transition-colors">
+       class="inline-flex items-center px-4 py-1.5 mb-4 text-xs font-bold uppercase tracking-widest bg-accent-cyan text-black w-fit hover:text-white transition-colors rounded-full">
       {{ featured.tags[0] }}
     </a>
     {% endif %}
@@ -45,7 +45,7 @@
     
     <!-- CTA Button -->
     <a href="{{ featured.url | relative_url }}"
-       class="inline-flex items-center px-6 py-3 bg-white text-black font-bold text-sm uppercase tracking-wider hover:bg-accent-cyan transition-colors w-fit group/btn">
+       class="inline-flex items-center px-6 py-3 bg-white text-black font-bold text-sm uppercase tracking-wider hover:bg-accent-cyan transition-colors w-fit group/btn rounded-full">
       Read More
       <svg class="w-5 h-5 ml-2 transition-transform group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>

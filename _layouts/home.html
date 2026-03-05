@@ -22,7 +22,7 @@ layout: base
       <div class="ml-6 flex-1 h-0.5 bg-gradient-to-r from-accent-cyan/50 to-transparent"></div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-white dark:bg-blackground">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {%- for post in site.posts -%}
         {%- if post.url == featured_post.url -%}{%- continue -%}{%- endif -%}
         {% include article-card-magazine-clean.html post=post %}

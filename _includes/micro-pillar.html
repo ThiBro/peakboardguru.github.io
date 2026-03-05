@@ -1,5 +1,5 @@
 <!-- Micro Pillar - Curated Learning Path Block -->
-<div class="relative h-full flex flex-col border border-gray-200 dark:border-gray-700 bg-white dark:bg-blackground p-6 transition-all duration-300 hover:border-accent-cyan hover:shadow-[0_0_8px_rgba(46,196,255,0.15)] group blueprint-grid-dense">
+<div class="relative h-full flex flex-col border border-gray-200 dark:border-gray-700 bg-white dark:bg-blackground p-6 transition-all duration-300 hover:border-accent-cyan hover:shadow-[0_0_8px_rgba(240,160,48,0.15)] group blueprint-grid-dense">
   {% assign pillar_text = site.data.ui_text.learning.definitions[include.pillar.id] %}
   <!-- Icon -->
   <div class="mb-4 inline-flex items-center justify-center w-12 h-12 bg-accent-cyan/10 text-accent-cyan border border-accent-cyan/30 transition-all duration-300 group-hover:bg-accent-cyan group-hover:text-white">
@@ -20,7 +20,7 @@
   <div class="mt-auto">
     <!-- Start Here Link (Primary) -->
     <a href="{{ include.pillar.start_link.url | relative_url }}"
-       class="inline-flex items-center px-5 py-2.5 mb-4 bg-gray-900 dark:bg-white text-white dark:text-black font-bold text-sm uppercase tracking-wider hover:bg-accent-cyan hover:text-black dark:hover:bg-accent-cyan transition-all duration-300 w-full justify-center group/btn">
+       class="inline-flex items-center px-5 py-2.5 mb-4 bg-gray-900 dark:bg-white text-white dark:text-black font-bold text-sm uppercase tracking-wider hover:bg-accent-cyan hover:text-black dark:hover:bg-accent-cyan transition-all duration-300 w-full justify-center group/btn rounded-full">
       {{ site.data.ui_text.learning.common.start_here_cta }}
       <svg class="w-4 h-4 ml-2 transition-transform group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
