@@ -19,7 +19,7 @@ layout: base
         <div class="absolute inset-0 z-10 flex flex-col justify-end">
             <div class="mx-auto w-full max-w-7xl px-6 lg:px-8 pb-10">
                 {% if page.bg_alternative %}
-                <div class="border border-gray-200 dark:border-gray-800 bg-white/90 dark:bg-blackground/80 p-6 md:p-8">
+                <div class="bg-white/90 dark:bg-blackground/80 p-6 md:p-8 rounded-xl" style="border: 2px solid #5C2E0E;">
                 {% endif %}
 
                     {% if page.tags and page.tags.size > 0 %}
@@ -65,7 +65,7 @@ layout: base
     {% else %}
     <!-- No-image fallback hero -->
     <div class="mx-auto max-w-7xl px-6 lg:px-8 pt-10">
-        <div class="border border-gray-200 dark:border-gray-800 bg-white dark:bg-blackground p-8">
+        <div class="bg-white dark:bg-blackground p-8 rounded-xl" style="border: 2px solid #5C2E0E;">
             <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-3">
                 Published in
                 {% if page.tags and page.tags.size > 0 %}
@@ -92,9 +92,9 @@ layout: base
 <!-- Main content -->
 <div class="relative {% if hero_image %}-mt-16{% endif %}">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="border border-gray-200 dark:border-gray-800 bg-white dark:bg-blackground">
+        <div class="bg-white dark:bg-blackground rounded-xl overflow-hidden" style="border: 2px solid #5C2E0E;">
             <!-- Article metadata -->
-            <div class="border-b border-gray-200 dark:border-gray-800 px-6 py-5 md:px-8">
+            <div class="px-6 py-5 md:px-8" style="border-bottom: 1px solid #5C2E0E33;">
                 <div class="flex items-center justify-between gap-4">
                     <div class="flex flex-wrap items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400">
                         <span>{{ page.date | date: "%b %d, %Y" }}</span>
@@ -120,7 +120,7 @@ layout: base
                 </div>
 
                 <!-- Side content -->
-                <div class="lg:col-span-3 border-l border-gray-200 dark:border-gray-800 pl-6 md:pl-8 pr-6 md:pr-8 min-w-0">
+                <div class="lg:col-span-3 pl-6 md:pl-8 pr-6 md:pr-8 min-w-0" style="border-left: 1px solid #5C2E0E33;">
                     <div class="sticky top-20 space-y-10 pt-6 overflow-wrap-anywhere">
                         <!-- Resources (Downloads & Links) -->
                         {% if page.downloads or page.read_more_links %}
