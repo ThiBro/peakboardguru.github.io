@@ -1,4 +1,0 @@
-﻿FFmpeg Befehl: C:\Users\ThiloBrosinsky\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-8.0.1-full_build\bin\ffmpeg.exe -y -f gdigrab -framerate 30 -i title="Peakboard Runtime" -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=44100 -t 15 -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" -r 30 -vsync cfr -c:v libx264 -preset fast -crf 23 -pix_fmt yuv420p -c:a aac -b:a 128k -shortest -movflags +faststart "C:\Source\Blog\assets\2026-03-05-08-47-47\bg_clip.mp4"
-Window Title: Peakboard Runtime
-Start: 2026-03-05T08:48:04.8949133+01:00
-
