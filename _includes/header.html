@@ -4,9 +4,12 @@
 
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
-            <!-- Logo/Home -->
-            <a href="{{ '/' | relative_url }}">
+            <!-- Logo/Home - Desktop: large image, Mobile: smaller image -->
+            <a href="{{ '/' | relative_url }}" class="hidden md:block">
                 <img src="{{ '/assets/img/logo-header.png' | relative_url }}" alt="{{ site.title }}" style="height: 250px; width: auto; position: fixed; top: -55px; left: 16px;" class="pointer-events-auto z-50">
+            </a>
+            <a href="{{ '/' | relative_url }}" class="block md:hidden">
+                <img src="{{ '/assets/img/logo-header.png' | relative_url }}" alt="{{ site.title }}" style="height: 125px; width: auto; position: fixed; top: -25px; left: 8px;" class="pointer-events-auto z-50">
             </a>
 
             <!-- Navigation -->
