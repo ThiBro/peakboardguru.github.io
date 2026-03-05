@@ -29,7 +29,7 @@ layout: base
         {{ site.data.ui_text.learning.page.start_here_text }}
       </div>
       {% if def.see_also %}
-        <a href="{{ def.see_also.url }}"
+        <a href="{{ def.see_also.url | relative_url }}"
            class="inline-flex items-center px-5 py-2.5 bg-gray-900 dark:bg-white text-white dark:text-black font-bold text-sm uppercase tracking-wider hover:bg-accent-cyan hover:text-black dark:hover:bg-accent-cyan transition-colors">
           <i class="fas fa-link mr-2"></i>
           {{ site.data.ui_text.learning.page.see_also_prefix }} {{ def.see_also.text }}

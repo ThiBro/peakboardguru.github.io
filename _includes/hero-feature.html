@@ -2,11 +2,11 @@
 {% assign featured = include.post %}
 <div class="relative w-full aspect-[16/9] max-h-[70vh] overflow-hidden group">
   <!-- Make the entire hero clickable (without nesting links) -->
-  <a href="{{ featured.url }}" class="absolute inset-0 z-0" aria-label="Read: {{ featured.title }}"></a>
+  <a href="{{ featured.url | relative_url }}" class="absolute inset-0 z-0" aria-label="Read: {{ featured.title }}"></a>
 
   <!-- Image (static) -->
   <div class="absolute inset-0">
-    <img src="{{ featured.image }}"
+    <img src="{{ featured.image | relative_url }}"
          alt="{{ featured.title }}"
          class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-95">
   </div>
@@ -18,7 +18,7 @@
   <div class="absolute inset-0 z-10 flex flex-col justify-end p-8 md:p-12 lg:p-14">
     <!-- Category Chip -->
     {% if featured.tags and featured.tags.size > 0 %}
-    <a href="/category/{{ featured.tags[0] | slugify }}"
+    <a href="{{ featured.tags[0] | slugify | prepend: '/category/' | relative_url }}"
        class="inline-flex items-center px-4 py-1.5 mb-4 text-xs font-bold uppercase tracking-widest bg-accent-cyan text-black w-fit hover:text-white transition-colors">
       {{ featured.tags[0] }}
     </a>
@@ -26,7 +26,7 @@
     
     <!-- Title -->
     <h1 class="font-heading text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-4 leading-tight">
-      <a href="{{ featured.url }}" class="hover:text-accent-cyan transition-colors">
+      <a href="{{ featured.url | relative_url }}" class="hover:text-accent-cyan transition-colors">
         {{ featured.title }}
       </a>
     </h1>
@@ -44,7 +44,7 @@
     </p>
     
     <!-- CTA Button -->
-    <a href="{{ featured.url }}"
+    <a href="{{ featured.url | relative_url }}"
        class="inline-flex items-center px-6 py-3 bg-white text-black font-bold text-sm uppercase tracking-wider hover:bg-accent-cyan transition-colors w-fit group/btn">
       Read More
       <svg class="w-5 h-5 ml-2 transition-transform group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">

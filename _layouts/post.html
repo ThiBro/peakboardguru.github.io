@@ -8,7 +8,7 @@ layout: base
 <section class="mb-10">
     {% if hero_image %}
     <div class="relative w-full aspect-[16/9] max-h-[70vh] overflow-hidden group">
-        <img src="{{ hero_image }}" alt="{{ page.title }}" class="absolute inset-0 w-full h-full object-cover">
+        <img src="{{ hero_image | relative_url }}" alt="{{ page.title }}" class="absolute inset-0 w-full h-full object-cover">
 
         {% unless page.bg_alternative %}
         <!-- Home-like gradient overlay -->
@@ -23,7 +23,7 @@ layout: base
                 {% endif %}
 
                     {% if page.tags and page.tags.size > 0 %}
-                    <a href="/category/{{ page.tags[0] | slugify }}"
+                    <a href="{{ page.tags[0] | slugify | prepend: '/category/' | relative_url }}"
                        class="inline-flex items-center px-4 py-1.5 mb-4 text-xs font-bold uppercase tracking-widest bg-accent-cyan text-black w-fit hover:text-white transition-colors">
                         {{ page.tags[0] }}
                     </a>
@@ -33,7 +33,7 @@ layout: base
                         Published in
                         {% if page.tags and page.tags.size > 0 %}
                             {% for tag in page.tags %}
-                                <a href="/category/{{ tag | slugify }}"
+                                <a href="{{ tag | slugify | prepend: '/category/' | relative_url }}"
                                    class="{% unless page.bg_alternative %}text-white hover:text-accent-cyan{% else %}text-gray-900 dark:text-white hover:text-accent-cyan{% endunless %} transition-colors">
                                     {{ tag }}
                                 </a>{% unless forloop.last %}, {% endunless %}
@@ -70,7 +70,7 @@ layout: base
                 Published in
                 {% if page.tags and page.tags.size > 0 %}
                     {% for tag in page.tags %}
-                        <a href="/category/{{ tag | slugify }}" class="text-gray-900 dark:text-white hover:text-accent-cyan transition-colors">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+                        <a href="{{ tag | slugify | prepend: '/category/' | relative_url }}" class="text-gray-900 dark:text-white hover:text-accent-cyan transition-colors">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
                     {% endfor %}
                 {% else %}
                     <span class="text-gray-900 dark:text-white">Uncategorized</span>
@@ -146,7 +146,7 @@ layout: base
                             </div>
                             <div class="space-y-6">
                                 {% if page.previous.url %}
-                                <a href="{{ page.previous.url }}" 
+                                <a href="{{ page.previous.url | relative_url }}"
                                    title="{{ page.previous.title }}"
                                    class="group block">
                                     <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-2">← Previous Article</p>
@@ -157,7 +157,7 @@ layout: base
                                 {% endif %}
 
                                 {% if page.next.url %}
-                                <a href="{{ page.next.url }}" 
+                                <a href="{{ page.next.url | relative_url }}"
                                    title="{{ page.next.title }}"
                                    class="group block">
                                     <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-2">Next Article →</p>

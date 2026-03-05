@@ -1,7 +1,7 @@
 <div class="px-8 mb-16 not-prose lg:mb-0 lg:top-4 lg:border-r-2 lg:border-secondary lg:sticky break-words">
 
-    <a href="/" class="block text-lg font-bold mb-2 break-words {% if page.url == '/index.html' %}text-secondary{% else %}text-gray-900 dark:text-light hover:text-secondary hover:underline{% endif %}">Home</a>
-    <a href="/about" class="block text-lg font-bold mb-2 break-words {% if page.url == '/about.html' %}text-secondary{% else %}text-gray-900 dark:text-light hover:text-secondary hover:underline{% endif %}">About</a>
+    <a href="{{ '/' | relative_url }}" class="block text-lg font-bold mb-2 break-words {% if page.url == '/index.html' %}text-secondary{% else %}text-gray-900 dark:text-light hover:text-secondary hover:underline{% endif %}">Home</a>
+    <a href="{{ '/about' | relative_url }}" class="block text-lg font-bold mb-2 break-words {% if page.url == '/about.html' %}text-secondary{% else %}text-gray-900 dark:text-light hover:text-secondary hover:underline{% endif %}">About</a>
 
     <p class="font-bold text-lg text-gray-900 dark:text-light mb-2">Archive</p>
     <div class="mb-8">

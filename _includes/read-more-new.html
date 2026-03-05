@@ -5,7 +5,7 @@
       <h4 class="text-[10px] font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-3">Downloads</h4>
       <div class="space-y-2">
         {% for link in include.downloads %}
-          <a href="{{ link.url }}" 
+          <a href="{{ link.url | relative_url }}" 
              title="{{ link.name }}"
              class="group block w-full text-sm font-bold text-gray-700 dark:text-gray-300 hover:text-accent-cyan transition-colors">
             <span class="inline-flex items-start">
@@ -25,7 +25,7 @@
       <h4 class="text-[10px] font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-3">Related Links</h4>
       <div class="space-y-2">
         {% for link in include.rml %}
-          <a href="{{ link.url }}" 
+          <a href="{{ link.url | relative_url }}" 
              title="{{ link.name }}"
              class="group block w-full text-sm font-bold text-gray-700 dark:text-gray-300 hover:text-accent-cyan transition-colors">
             <span class="inline-flex items-start">

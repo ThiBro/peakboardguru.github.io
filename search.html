@@ -104,7 +104,7 @@ createApp({
 
         onMounted(async () => {
             try {
-                const response = await fetch('/search.json')
+                const response = await fetch('{{ "/search.json" | relative_url }}')
                 const posts = await response.json()
                 
                 fuse.value = new Fuse(posts, {

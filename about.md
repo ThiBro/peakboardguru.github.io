@@ -19,5 +19,5 @@ It's nice to have you here, but please make sure to understand:
 
 Love, Michelle
 
-![image](/assets/img/michelle.png)
+![image]({{ site.baseurl }}/assets/img/michelle.png)
 

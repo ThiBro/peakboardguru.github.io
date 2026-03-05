@@ -21,15 +21,15 @@ The display opens with a bold header showing "Today's Class Program" along with 
 
 To the right of the table, three KPI tiles stacked vertically provide a quick snapshot of the studio's pulse: the number of active members checked in today, the total number of classes offered, and a countdown showing how many minutes until the next class begins. This countdown is especially useful for members deciding whether to grab a coffee or head straight to the studio.
 
-![screenshot](/assets/2026-03-03-16-34-54/010.png)
+![screenshot]({{ site.baseurl }}/assets/2026-03-03-16-34-54/010.png)
 
 At the bottom, a bar chart visualizes the occupancy rate for each class as a percentage, making it easy to spot which sessions are nearly full and which still have plenty of room. This helps members plan ahead and encourages them to try less crowded alternatives.
 
 The sporty design uses a dark background with neon green accents, matching the energetic atmosphere of a gym environment. Staff benefit too — fewer questions at the front desk, and trainers can see at a glance how their classes are filling up.
 
-The result: a single screen that keeps everyone informed, reduces front-desk inquiries, and adds a modern, professional touch to any fitness studio. You can [download the PBMX](/assets/2026-03-03-16-34-54/Peakboard.pbmx) and try it yourself.
+The result: a single screen that keeps everyone informed, reduces front-desk inquiries, and adds a modern, professional touch to any fitness studio. You can [download the PBMX]({{ site.baseurl }}/assets/2026-03-03-16-34-54/Peakboard.pbmx) and try it yourself.
 
 
 ## Video
 
-<video width="100%" controls><source src="/assets/2026-03-03-16-34-54/video.mp4" type="video/mp4"></video>
+<video width="100%" controls><source src="{{ site.baseurl }}/assets/2026-03-03-16-34-54/video.mp4" type="video/mp4"></video>

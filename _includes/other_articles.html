@@ -3,7 +3,7 @@
     {% if page.previous %}
       <article class="flex flex-col items-start bg-primary hover:bg-primary/90 dark:hover:bg-primary/70 rounded-2xl shadow-inner not-prose">
         <div class="max-w-xl px-4 pt-2 pb-4">
-          <a href="{{ page.previous.url }}" class="group relative text-left">
+          <a href="{{ page.previous.url | relative_url }}" class="group relative text-left">
             <p class="mt-4 line-clamp-3 text-sm leading-6 text-light italic">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="rotate-180 w-4 h-4 inline mb-0.5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
@@ -22,7 +22,7 @@
     {% if page.next %}
     <article class="flex flex-col items-start bg-primary hover:bg-primary/70 rounded-2xl shadow-inner not-prose">
       <div class="max-w-xl px-4 pt-2 pb-4">
-        <a href="{{ page.next.url }}" class="group relative text-right">
+        <a href="{{ page.next.url | relative_url }}" class="group relative text-right">
           <p class="mt-4 line-clamp-3 text-sm leading-6 text-light italic">
             Next article
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 inline mb-0.5">

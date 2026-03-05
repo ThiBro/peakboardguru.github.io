@@ -3,8 +3,8 @@
   <!-- Image -->
   {% if include.post.image %}
   <div class="relative w-full aspect-[16/9] overflow-hidden bg-gray-100 dark:bg-gray-900">
-    <a href="{{ include.post.url }}" class="block">
-      <img src="{{ include.post.image }}" 
+    <a href="{{ include.post.url | relative_url }}" class="block">
+      <img src="{{ include.post.image | relative_url }}"
            alt="{{ include.post.title }}" 
            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
     </a>
@@ -22,13 +22,13 @@
     
     <!-- Title -->
     <h3 class="font-heading text-lg font-bold text-gray-900 dark:text-white mb-3 leading-tight group-hover:text-accent-cyan transition-colors line-clamp-2">
-      <a href="{{ include.post.url }}">{{ include.post.title }}</a>
+      <a href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a>
     </h3>
     
     <!-- Tags -->
     <div class="flex flex-wrap gap-2 mb-4">
       {% for tag in include.post.tags limit:2 %}
-        <a href="/category/{{ tag | slugify }}" 
+        <a href="{{ tag | slugify | prepend: '/category/' | relative_url }}"
            class="text-[10px] font-bold uppercase tracking-wider text-accent-cyan hover:text-accent-amber transition-colors">
           #{{ tag }}
         </a>
@@ -41,7 +41,7 @@
     </p>
     
     <!-- Read More Link -->
-    <a href="{{ include.post.url }}" 
+    <a href="{{ include.post.url | relative_url }}" 
        class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-gray-900 dark:text-white hover:text-accent-cyan transition-colors">
       Read Article →
     </a>

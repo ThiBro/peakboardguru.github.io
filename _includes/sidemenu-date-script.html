@@ -26,7 +26,8 @@
     dateLinks[i].onclick = (ev) => {
         // check if page is home derived from path
         const path = window.location.pathname;
-        const isHome = path === "/" || path === "/index.html" || path === "/index";
+        const base = "{{ site.baseurl }}";
+        const isHome = path === base + "/" || path === base + "/index.html" || path === base + "/index" || path === "/" || path === "/index.html";
 
         if(isHome) {
             const dateLinkValue = ev.target.getAttribute("data-date-link");
@@ -48,7 +49,7 @@
         } else {
             // navigate to home with url anchor
             const dateLinkValue = ev.target.getAttribute("data-date-link");
-            window.location.href = `/?archive=${dateLinkValue}`;
+            window.location.href = `{{ '/' | relative_url }}?archive=${dateLinkValue}`;
         }
     }
   }
