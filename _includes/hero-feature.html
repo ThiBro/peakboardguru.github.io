@@ -1,6 +1,11 @@
 <!-- Hero Feature Block -->
 {% assign featured = include.post %}
-<div class="relative w-full aspect-[16/9] max-h-[70vh] overflow-hidden group">
+<style>
+  @media (max-width: 767px) {
+    .hero-feature-aspect { aspect-ratio: 4/3 !important; max-height: 70vh !important; }
+  }
+</style>
+<div class="hero-feature-aspect relative w-full overflow-hidden group" style="aspect-ratio: 16/9; max-height: 70vh;">
   <!-- Make the entire hero clickable (without nesting links) -->
   <a href="{{ featured.url | relative_url }}" class="absolute inset-0 z-0" aria-label="Read: {{ featured.title }}"></a>
 
