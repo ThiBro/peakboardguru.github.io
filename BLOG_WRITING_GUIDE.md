@@ -137,9 +137,9 @@ In this article, we will discuss how to...
 Store images in `/assets/YYYY-MM-DD-HH-MM-SS/` folder matching the post date.
 
 **Naming conventions:**
-- Hero image: `title.png` or descriptive name like `my-topic-title.png`
-- Landscape header: `title_landscape.png` or `my-topic-header-landscape.png`
-- Screenshots: numbered `010.png`, `020.png`, `030.png` (increments of 10) OR descriptive kebab-case names like `data-source-configuration.png`
+- Hero image: `title.png` or `title.jpg` (match the actual file extension)
+- Landscape header: `title_landscape.png` or `title_landscape.jpg`
+- Screenshot: `010.png` — each article typically has only one screenshot
 - Animated demos: `010.gif`, `result.gif`
 - Downloadable files (`.pbmx`, `.pbfx`, `.py`, `.txt`) go in the same folder
 
