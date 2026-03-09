@@ -2,13 +2,34 @@
 layout: base
 ---
 
-<!-- Hero Feature Block - Full Width -->
-{%- assign featured_post = site.posts | first -%}
-{% if featured_post %}
-<div class="mb-16">
-  {% include hero-feature.html post=featured_post %}
+<!-- Hero Video Block -->
+<div class="relative w-full overflow-hidden" style="aspect-ratio: 16/9; max-height: 70vh;">
+  <video class="absolute inset-0 w-full h-full object-cover" style="object-position: center 30%;" autoplay muted loop playsinline>
+    <source src="{{ '/assets/vid/kling_loop.mp4' | relative_url }}" type="video/mp4">
+  </video>
+  <div class="absolute inset-0 bg-black/30"></div>
 </div>
-{% endif %}
+
+<!-- Description Block -->
+<div style="background-color: #F5D5B0;">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8 py-12 md:py-16 text-center">
+    <h1 class="font-heading text-2xl md:text-3xl lg:text-4xl font-extrabold text-black mb-6 leading-tight">
+      Welcome to the Guru's Dashboard Dojo
+    </h1>
+    <div class="text-base md:text-lg space-y-4 max-w-3xl mx-auto text-gray-900">
+      <p>
+        Looking for ready-made Peakboard projects you can download, take apart, remix, and make your own? You've come to the right place — and it's completely free if you grab the
+        <a href="https://www.peakboard.com/downloads/peakboard-designer" target="_blank" class="font-semibold hover:underline" style="color: #9A4400;">Community Edition of Peakboard Designer</a>.
+      </p>
+      <p>
+        You'll find dashboards for <strong>production</strong>, <strong>logistics</strong>, <strong>restaurants</strong>, <strong>hotels</strong>, <strong>personal use</strong>, and things that fall squarely into the <em>"why not?"</em> category. Whether it's a shopfloor monitor or a craft-beer brewing tracker — grab what you need and make it yours.
+      </p>
+      <p class="text-sm text-gray-700">
+        No fine print, no strings attached, no obligation to subscribe to yet another newsletter. Just download and go.
+      </p>
+    </div>
+  </div>
+</div>
 
 <!-- Page Wrapper with Max Width -->
 <div class="mx-auto max-w-7xl px-6 lg:px-8">
@@ -24,7 +45,6 @@ layout: base
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {%- for post in site.posts -%}
-        {%- if post.url == featured_post.url -%}{%- continue -%}{%- endif -%}
         {% include article-card-magazine-clean.html post=post %}
       {%- endfor -%}
     </div>

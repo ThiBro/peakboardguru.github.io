@@ -3,7 +3,7 @@ title: About
 layout: about
 hero:
   title: About This Blog
-  subtitle: Peakboard example projects, tips, and a sprinkle of dashboard wisdom
+  subtitle: Peakboard Guru - The hottest apps on the planet
   image_header: /assets/img/header.jpg
 ---
 
@@ -18,11 +18,11 @@ Every article comes with a downloadable PBMX file so you can open it in Peakboar
 1. This site is **not** affiliated with Peakboard GmbH. For official documentation, head over to [help.peakboard.com](https://help.peakboard.com).
 2. All projects are provided as-is. If something doesn't work, it's probably not a bug — it's a *surprise feature*.
 3. Articles refer to the Peakboard Designer version available at the time of writing. Things evolve, buttons move, and occasionally a hack becomes unnecessary because the product team actually listens.
-4. Got questions, ideas, or complaints about the Guru's fashion choices? Reach out to Frank or visit the [Peakboard subreddit](https://www.reddit.com/r/Peakboard/).
+4. Got questions, ideas, or complaints about the Guru's fashion choices? Reach out to Thilo or visit the [Peakboard subreddit](https://www.reddit.com/r/Peakboard/).
 
 May your dashboards always be real-time and your data sources never timeout.
 
-Cheers, Frank
+Cheers, Thilo
 
 ![The Peakboard Guru]({{ site.baseurl }}/assets/img/guru.png)
 
