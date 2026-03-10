@@ -106,7 +106,7 @@ createApp({
             try {
                 const response = await fetch('{{ "/search.json" | relative_url }}')
                 const posts = await response.json()
-                
+
                 fuse.value = new Fuse(posts, {
                     keys: [
                         { name: 'title', weight: 0.5 },
@@ -119,6 +119,14 @@ createApp({
                     ignoreLocation: true,
                     minMatchCharLength: 3
                 })
+
+                // Read query parameter from URL
+                const params = new URLSearchParams(window.location.search)
+                const q = params.get('q')
+                if (q) {
+                    searchQuery.value = q
+                    performSearch()
+                }
             } catch (error) {
                 console.error('Error initializing search:', error)
             }
