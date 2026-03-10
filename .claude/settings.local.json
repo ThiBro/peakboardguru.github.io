@@ -10,7 +10,9 @@
       "Bash(echo:*)",
       "Bash(magick:*)",
       "Bash(python:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(find assets/2026-* -name \"ffmpeg_log.txt\" -o -name \"greenscreen.png\" -o -name \"heygen_green.mp4\" -o -name \"bg_clip.mp4\" 2>/dev/null)",
+      "Bash(find assets/2026-* \\\\\\( -name \"ffmpeg_log.txt\" -o -name \"greenscreen.png\" -o -name \"heygen_green.mp4\" -o -name \"bg_clip.mp4\" \\\\\\) -delete)"
     ]
   }
 }

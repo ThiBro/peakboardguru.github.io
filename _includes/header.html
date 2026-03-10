@@ -8,7 +8,7 @@
             <a href="{{ '/' | relative_url }}" class="hidden md:block">
                 <img src="{{ '/assets/img/logo-header.png' | relative_url }}" alt="{{ site.title }}" style="height: 250px; width: auto; position: fixed; top: -55px; left: 16px;" class="pointer-events-auto z-50">
             </a>
-            <a href="{{ '/' | relative_url }}" class="block md:hidden">
+            <a href="{{ '/' | relative_url }}" id="mobile-logo" class="block md:hidden">
                 <img src="{{ '/assets/img/logo-header.png' | relative_url }}" alt="{{ site.title }}" style="height: 125px; width: auto; position: fixed; top: -25px; left: 8px;" class="pointer-events-auto z-50">
             </a>
 
@@ -44,13 +44,16 @@
     function toggleHeaderSearch() {
         var form = document.getElementById('header-search-form');
         var input = document.getElementById('header-search-input');
+        var mobileLogo = document.getElementById('mobile-logo');
         if (form.classList.contains('hidden')) {
             form.classList.remove('hidden');
             form.classList.add('flex');
+            if (mobileLogo) mobileLogo.style.display = 'none';
             input.focus();
         } else {
             form.classList.add('hidden');
             form.classList.remove('flex');
+            if (mobileLogo) mobileLogo.style.display = '';
             input.value = '';
         }
     }

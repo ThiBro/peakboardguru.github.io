@@ -1,68 +1,0 @@
-﻿FFmpeg Befehl: C:\Users\ThiloBrosinsky\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-8.0.1-full_build\bin\ffmpeg.exe -y -f gdigrab -framerate 30 -i title="Peakboard Runtime" -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=44100 -t 15 -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" -r 30 -vsync cfr -c:v libx264 -preset fast -crf 23 -pix_fmt yuv420p -c:a aac -b:a 128k -shortest -movflags +faststart "C:\Source\peakboardguru.github.io\assets\2026-03-05-22-48-05\bg_clip.mp4"
-Window Title: Peakboard Runtime
-Start: 2026-03-05T22:48:28.4949091+01:00
-
-Exit Code: 0
-Exited normally: True
-
-STDERR:
-ffmpeg version 8.0.1-full_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
-  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
-  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-lcms2 --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-libdvdnav --enable-libdvdread --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-liboapv --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-openal --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint --enable-whisper
-  libavutil      60.  8.100 / 60.  8.100
-  libavcodec     62. 11.100 / 62. 11.100
-  libavformat    62.  3.100 / 62.  3.100
-  libavdevice    62.  1.100 / 62.  1.100
-  libavfilter    11.  4.100 / 11.  4.100
-  libswscale      9.  1.100 /  9.  1.100
-  libswresample   6.  1.100 /  6.  1.100
--vsync is deprecated. Use -fps_mode
-[gdigrab @ 00000247ff126800] Found window Peakboard Runtime, capturing 1920x1080x32 at (0,0)
-[gdigrab @ 00000247ff126800] Stream #0: not enough frames to estimate rate; consider increasing probesize
-Input #0, gdigrab, from 'title=Peakboard Runtime':
-  Duration: N/A, start: 1772747308.598507, bitrate: 1990668 kb/s
-  Stream #0:0: Video: bmp, bgra, 1920x1080, 1990668 kb/s, 30 fps, 1000k tbr, 1000k tbn, start 1772747308.598507
-Input #1, lavfi, from 'anullsrc=channel_layout=stereo:sample_rate=44100':
-  Duration: N/A, start: 0.000000, bitrate: 705 kb/s
-  Stream #1:0: Audio: pcm_u8, 44100 Hz, stereo, u8, 705 kb/s
-Stream mapping:
-  Stream #0:0 -> #0:0 (bmp (native) -> h264 (libx264))
-  Stream #1:0 -> #0:1 (pcm_u8 (native) -> aac (native))
-Press [q] to stop, [?] for help
-[libx264 @ 00000247ff1391c0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2 AVX512
-[libx264 @ 00000247ff1391c0] profile High, level 4.0, 4:2:0, 8-bit
-[libx264 @ 00000247ff1391c0] 264 - core 165 r3223 0480cb0 - H.264/MPEG-4 AVC codec - Copyleft 2003-2025 - http://www.videolan.org/x264.html - options: cabac=1 ref=2 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=6 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=1 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=30 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
-Output #0, mp4, to 'C:\Source\peakboardguru.github.io\assets\2026-03-05-22-48-05\bg_clip.mp4':
-  Metadata:
-    encoder         : Lavf62.3.100
-  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 1920x1080, q=2-31, 30 fps, 15360 tbn
-    Metadata:
-      encoder         : Lavc62.11.100 libx264
-    Side data:
-      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
-  Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s
-    Metadata:
-      encoder         : Lavc62.11.100 aac
-frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A elapsed=0:00:00.52    frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A elapsed=0:00:01.03    frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A elapsed=0:00:01.55    frame=    5 fps=2.4 q=29.0 size=       0KiB time=00:00:00.10 bitrate=   3.8kbits/s speed=0.0484x elapsed=0:00:02.06    frame=   20 fps=7.7 q=29.0 size=       0KiB time=00:00:00.60 bitrate=   0.6kbits/s speed=0.232x elapsed=0:00:02.58    frame=   35 fps= 11 q=29.0 size=       0KiB time=00:00:01.10 bitrate=   0.3kbits/s speed=0.355x elapsed=0:00:03.09    frame=   51 fps= 14 q=29.0 size=       0KiB time=00:00:01.63 bitrate=   0.2kbits/s speed=0.453x elapsed=0:00:03.60    frame=   66 fps= 16 q=29.0 size=       0KiB time=00:00:02.13 bitrate=   0.2kbits/s speed=0.517x elapsed=0:00:04.12    frame=   82 fps= 18 q=29.0 size=       0KiB time=00:00:02.66 bitrate=   0.1kbits/s speed=0.574x elapsed=0:00:04.64    frame=   97 fps= 19 q=29.0 size=       0KiB time=00:00:03.16 bitrate=   0.1kbits/s speed=0.614x elapsed=0:00:05.15    frame=  113 fps= 20 q=29.0 size=       0KiB time=00:00:03.70 bitrate=   0.1kbits/s speed=0.653x elapsed=0:00:05.67    frame=  128 fps= 21 q=29.0 size=       0KiB time=00:00:04.20 bitrate=   0.1kbits/s speed=0.679x elapsed=0:00:06.18    frame=  144 fps= 21 q=29.0 size=       0KiB time=00:00:04.73 bitrate=   0.1kbits/s speed=0.706x elapsed=0:00:06.69    frame=  159 fps= 22 q=29.0 size=       0KiB time=00:00:05.23 bitrate=   0.1kbits/s speed=0.725x elapsed=0:00:07.21    frame=  174 fps= 23 q=29.0 size=       0KiB time=00:00:05.73 bitrate=   0.1kbits/s speed=0.742x elapsed=0:00:07.73    frame=  190 fps= 23 q=29.0 size=       0KiB time=00:00:06.26 bitrate=   0.1kbits/s speed=0.759x elapsed=0:00:08.25    frame=  206 fps= 23 q=29.0 size=       0KiB time=00:00:06.80 bitrate=   0.1kbits/s speed=0.775x elapsed=0:00:08.77    frame=  221 fps= 24 q=29.0 size=       0KiB time=00:00:07.30 bitrate=   0.1kbits/s speed=0.786x elapsed=0:00:09.28    frame=  237 fps= 24 q=29.0 size=       0KiB time=00:00:07.83 bitrate=   0.0kbits/s speed=0.799x elapsed=0:00:09.80    frame=  252 fps= 24 q=29.0 size=       0KiB time=00:00:08.33 bitrate=   0.0kbits/s speed=0.807x elapsed=0:00:10.32    frame=  256 fps= 24 q=29.0 size=       0KiB time=00:00:08.46 bitrate=   0.0kbits/s speed=0.782x elapsed=0:00:10.82    frame=  256 fps= 23 q=29.0 size=       0KiB time=00:00:08.46 bitrate=   0.0kbits/s speed=0.746x elapsed=0:00:11.35    frame=  256 fps= 22 q=29.0 size=       0KiB time=00:00:08.46 bitrate=   0.0kbits/s speed=0.713x elapsed=0:00:11.88    frame=  256 fps= 21 q=29.0 size=       0KiB time=00:00:08.46 bitrate=   0.0kbits/s speed=0.683x elapsed=0:00:12.39    frame=  256 fps= 20 q=29.0 size=       0KiB time=00:00:08.46 bitrate=   0.0kbits/s speed=0.656x elapsed=0:00:12.91    frame=  256 fps= 19 q=29.0 size=       0KiB time=00:00:08.46 bitrate=   0.0kbits/s speed=0.631x elapsed=0:00:13.42    frame=  256 fps= 18 q=29.0 size=       0KiB time=00:00:08.46 bitrate=   0.0kbits/s speed=0.607x elapsed=0:00:13.94    frame=  256 fps= 18 q=29.0 size=       0KiB time=00:00:08.46 bitrate=   0.0kbits/s speed=0.586x elapsed=0:00:14.44    frame=  256 fps= 17 q=29.0 size=       0KiB time=00:00:08.46 bitrate=   0.0kbits/s speed=0.565x elapsed=0:00:14.97    [mp4 @ 00000247ff138540] Starting second pass: moving the moov atom to the beginning of the file
-[out#0/mp4 @ 00000247ff131d40] video:172KiB audio:4KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 9.809942%
-frame=  450 fps= 29 q=-1.0 Lsize=     193KiB time=00:00:14.93 bitrate= 105.8kbits/s speed=0.97x elapsed=0:00:15.39    
-[libx264 @ 00000247ff1391c0] frame I:2     Avg QP:16.39  size: 39832
-[libx264 @ 00000247ff1391c0] frame P:125   Avg QP:26.21  size:   453
-[libx264 @ 00000247ff1391c0] frame B:323   Avg QP:28.54  size:   120
-[libx264 @ 00000247ff1391c0] consecutive B-frames:  1.8%  5.8%  5.3% 87.1%
-[libx264 @ 00000247ff1391c0] mb I  I16..4: 38.4% 53.2%  8.4%
-[libx264 @ 00000247ff1391c0] mb P  I16..4:  0.3%  0.1%  0.1%  P16..4:  0.3%  0.0%  0.0%  0.0%  0.0%    skip:99.2%
-[libx264 @ 00000247ff1391c0] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.2%  0.0%  0.0%  direct: 0.0%  skip:99.8%  L0:42.9% L1:56.9% BI: 0.2%
-[libx264 @ 00000247ff1391c0] 8x8 transform intra:45.3% inter:35.0%
-[libx264 @ 00000247ff1391c0] coded y,uvDC,uvAC intra: 5.6% 11.4% 7.9% inter: 0.0% 0.0% 0.0%
-[libx264 @ 00000247ff1391c0] i16 v,h,dc,p: 56% 43%  0%  0%
-[libx264 @ 00000247ff1391c0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 55% 31% 13%  0%  0%  0%  0%  0%  0%
-[libx264 @ 00000247ff1391c0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 31% 24% 26%  3%  4%  4%  2%  3%  2%
-[libx264 @ 00000247ff1391c0] i8c dc,h,v,p: 64% 26% 10%  0%
-[libx264 @ 00000247ff1391c0] Weighted P-Frames: Y:0.0% UV:0.0%
-[libx264 @ 00000247ff1391c0] ref P L0: 39.8% 60.2%
-[libx264 @ 00000247ff1391c0] ref B L0: 81.9% 18.1%
-[libx264 @ 00000247ff1391c0] ref B L1: 92.2%  7.8%
-[libx264 @ 00000247ff1391c0] kb/s:93.42
-[aac @ 00000247ff13d880] Qavg: 65536.000
-

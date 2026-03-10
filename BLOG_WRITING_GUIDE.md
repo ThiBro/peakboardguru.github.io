@@ -65,7 +65,7 @@ downloads:
 | `bg_alternative` | `true` = light hero box style. Use together with `image_header` (modern style) |
 | `description` | Shown below title in hero area and used for SEO meta tags |
 | `read_more_links` | List of `{name, url}` shown in sidebar under "Related Links" |
-| `downloads` | List of `{name, url}` rendered as a Guru download button image at the top of the right sidebar. Do NOT add download links in the article body — the button is generated automatically from this field |
+| `downloads` | List of `{name, url}` rendered as a Guru download button image at the top of the right sidebar. Do NOT add download links in the article body - the button is generated automatically from this field |
 
 ### Post Template
 
@@ -105,7 +105,7 @@ Tags are space-separated in front matter. Use an **industry-specific** tag that 
 | `energy` | Energy, utilities, sustainability |
 | `transportation` | Public transit, airports, fleet management |
 
-You can use multiple tags if applicable (e.g. `production logistics`). The first tag is used as the primary category shown on the article card. Add new tags as needed when no existing tag fits — keep them lowercase, use hyphens for multi-word tags.
+You can use multiple tags if applicable (e.g. `production logistics`). The first tag is used as the primary category shown on the article card. Add new tags as needed when no existing tag fits - keep them lowercase, use hyphens for multi-word tags.
 
 ---
 
@@ -124,9 +124,9 @@ In this article, we will discuss how to...
 
 ### Headers
 
-- **`##` (H2)** for main sections — the primary structural divisions
+- **`##` (H2)** for main sections - the primary structural divisions
 - **`###` (H3)** for subsections within a section
-- **Never use `#` (H1)** in the body — the layout renders the title from front matter
+- **Never use `#` (H1)** in the body - the layout renders the title from front matter
 - Common section patterns:
   - Setup / context section
   - Step-by-step procedural sections (one H2 per step)
@@ -139,7 +139,7 @@ Store images in `/assets/YYYY-MM-DD-HH-MM-SS/` folder matching the post date.
 **Naming conventions:**
 - Hero image: `title.png` or `title.jpg` (match the actual file extension)
 - Landscape header: `title_landscape.png` or `title_landscape.jpg`
-- Screenshot: `010.png` — each article typically has only one screenshot
+- Screenshot: `010.png` - each article typically has only one screenshot
 - Animated demos: `010.gif`, `result.gif`
 - Downloadable files (`.pbmx`, `.pbfx`, `.py`, `.txt`) go in the same folder
 
@@ -155,14 +155,14 @@ Or with descriptive alt text (preferred for newer posts):
 
 ### Code Blocks
 
-**Method 1 — Liquid highlight tag:**
+**Method 1 - Liquid highlight tag:**
 ```liquid
 {% highlight json %}
 { "key": "value" }
 {% endhighlight %}
 ```
 
-**Method 2 — Fenced code blocks (also fine):**
+**Method 2 - Fenced code blocks (also fine):**
 ````markdown
 ```json
 { "key": "value" }
@@ -215,7 +215,7 @@ The URL preserves the exact filename casing (not lowercased). There is no date i
 
 ## 6. Writing Style
 
-- **Voice:** The blog author is "Michelle" — write in first person plural ("we") or instructional second person ("you")
+- **Voice:** The blog author is "Michelle" - write in first person plural ("we") or instructional second person ("you")
 - **Tone:** Technical but approachable, sometimes playful/punny titles
 - **Structure:** Problem → Setup → Step-by-step walkthrough → Result/Conclusion
 - **Screenshots:** Heavy use of annotated screenshots showing each configuration step
