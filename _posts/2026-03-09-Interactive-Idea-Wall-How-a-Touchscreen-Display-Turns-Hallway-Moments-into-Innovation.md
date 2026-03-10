@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: "Interactive Idea Wall - How a Touchscreen Display Turns Hallway Moments into Innovation"
-date: 2026-03-09 00:00:00 +0000
+date: 2026-03-10 00:00:00 +0000
 tags: office
 image: /assets/2026-03-09-12-35-22/title.jpg
 bg_alternative: true
@@ -10,6 +10,8 @@ downloads:
   - name: Peakboard.pbmx
     url: /assets/2026-03-09-12-35-22/Peakboard.pbmx
 ---
+{% include youtube.html id="eq7ua-ziwVk" %}
+
 Great ideas are everywhere in the workplace - during coffee breaks, in the elevator, or walking past a colleague's desk. But without a visible, low-friction way to capture them, most of those sparks fizzle out before anyone else even hears about them. In this article, we build an Interactive Idea Wall that turns a single large touchscreen into a company-wide suggestion board. Employees can submit new ideas, browse what others have proposed, and upvote their favorites - all in under thirty seconds, no app install required.
 
 ## The problem with invisible ideas
@@ -32,11 +34,15 @@ Below the header, idea cards are arranged in a scrollable grid. Each card shows 
 
 Anyone walking by can tap the coral-colored "Submit New Idea" button on the touchscreen. A simple form appears asking for just four things: your name, an idea title, a short description, and a category. The category picker uses visual tiles rather than a dropdown, making it fast and intuitive to choose between Efficiency, Product, Culture, Technology, or Fun.
 
+![image](/assets/2026-03-09-12-35-22/020.png)
+
 The whole process takes less than thirty seconds. There is no login, no account creation, no approval workflow. The idea appears on the board immediately, and everyone in the building can see it.
 
 ## Voting and ranking
 
 Each idea card has an "Upvote" button. Tap it, and the vote count increases instantly. The board automatically re-sorts so the most popular ideas float to the top. This creates a natural feedback loop - popular ideas get more visibility, which drives even more votes.
+
+![image](/assets/2026-03-09-12-35-22/030.png)
 
 Over the course of a week, you can watch the landscape shift. A quiet Monday might see a handful of process improvement suggestions, while a Friday afternoon might bring a wave of "Fun" category ideas. The pie chart in the header tracks these trends in real time.
 

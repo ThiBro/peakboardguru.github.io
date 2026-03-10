@@ -46,7 +46,6 @@ image: /assets/2026-03-03-14-30-00/title.png
 ### Optional Fields
 
 ```yaml
-image_header: /assets/2026-03-03-14-30-00/title_landscape.png
 bg_alternative: true
 description: "One or two sentences summarizing what this article covers."
 read_more_links:
@@ -61,8 +60,7 @@ downloads:
 
 | Field | Description |
 |-------|-------------|
-| `image_header` | Landscape version of hero image for wide banner display |
-| `bg_alternative` | `true` = light hero box style. Use together with `image_header` (modern style) |
+| `bg_alternative` | `true` = light hero box style with a semi-transparent text box over the image |
 | `description` | Shown below title in hero area and used for SEO meta tags |
 | `read_more_links` | List of `{name, url}` shown in sidebar under "Related Links" |
 | `downloads` | List of `{name, url}` rendered as a Guru download button image at the top of the right sidebar. Do NOT add download links in the article body - the button is generated automatically from this field |
@@ -76,7 +74,6 @@ title: Article Title - With Subtitle
 date: 2026-03-03 00:00:00 +0000
 tags: fitness
 image: /assets/2026-03-03-14-30-00/title.png
-image_header: /assets/2026-03-03-14-30-00/title_landscape.png
 bg_alternative: true
 description: "Short summary of the article for SEO and hero display."
 downloads:
@@ -138,7 +135,6 @@ Store images in `/assets/YYYY-MM-DD-HH-MM-SS/` folder matching the post date.
 
 **Naming conventions:**
 - Hero image: `title.png` or `title.jpg` (match the actual file extension)
-- Landscape header: `title_landscape.png` or `title_landscape.jpg`
 - Screenshot: `010.png` - each article typically has only one screenshot
 - Animated demos: `010.gif`, `result.gif`
 - Downloadable files (`.pbmx`, `.pbfx`, `.py`, `.txt`) go in the same folder
@@ -196,7 +192,7 @@ Supported language identifiers: `json`, `lua`, `sql`, `csharp`, `python`, `abap`
 {% include youtube.html id="VIDEO_ID_HERE" %}
 ```
 
-Usually placed near the end of the article as a demo video.
+Always placed at the very top of the article, before the first text paragraph. No heading needed above the video.
 
 ---
 
@@ -240,6 +236,8 @@ downloads:
   - name: GymClassSchedule.pbmx
     url: /assets/2026-03-03-14-30-00/GymClassSchedule.pbmx
 ---
+<video width="100%" controls><source src="{{ site.baseurl }}/assets/2026-03-03-14-30-00/video.mp4" type="video/mp4"></video>
+
 Fitness studios often need a way to present their daily class schedule.
 In this article, we build a complete dashboard with a course timetable,
 KPI cards, and an occupancy bar chart.
