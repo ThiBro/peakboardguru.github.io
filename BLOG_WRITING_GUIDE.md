@@ -135,18 +135,12 @@ Store images in `/assets/YYYY-MM-DD-HH-MM-SS/` folder matching the post date.
 
 **Naming conventions:**
 - Hero image: `title.png` or `title.jpg` (match the actual file extension)
-- Screenshot: `010.png` - each article typically has only one screenshot
-- Animated demos: `010.gif`, `result.gif`
+- Screenshot: `010.png` - each article has exactly one screenshot, always named `010.png`
 - Downloadable files (`.pbmx`, `.pbfx`, `.py`, `.txt`) go in the same folder
 
 **Markdown syntax:**
 ```markdown
-![image](/assets/2026-03-03-14-30-00/010.png)
-```
-
-Or with descriptive alt text (preferred for newer posts):
-```markdown
-![Data source configuration dialog](/assets/2026-03-03-14-30-00/data-source-configuration.png)
+![screenshot](/assets/2026-03-03-14-30-00/010.png)
 ```
 
 ### Code Blocks
