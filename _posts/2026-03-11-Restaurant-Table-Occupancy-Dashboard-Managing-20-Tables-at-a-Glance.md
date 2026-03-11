@@ -11,8 +11,6 @@ downloads:
   - name: Peakboard.pbmx
     url: /assets/2026-03-11-15-12-57/Peakboard.pbmx
 ---
-{% include youtube.html id="y_oHwGmaQ8A" %}
-
 Running a busy restaurant with 20 tables spread across four areas is a coordination challenge. The host at the entrance needs to know which tables are free, which are occupied, and which are reserved - all without flipping through paper lists or yelling across the room. In this article, we build a live, interactive floor plan dashboard that turns table management from a memory game into a three-second glance at a color-coded map.
 
 ## The problem with traditional table management
@@ -55,3 +53,8 @@ The color-coded system also prevents the most common hosting mistake: double-boo
 ## Conclusion
 
 This dashboard replaces guesswork with real-time visibility. Twenty tables across four areas, all managed from a single touchscreen at the entrance. The host sees the full picture at a glance, seats guests in seconds, handles reservations without paperwork, and keeps the dining room running smoothly even on the busiest nights. For any restaurant that has outgrown sticky notes but does not need a heavyweight reservation platform, this is a practical, low-overhead solution that pays off from day one.
+
+
+## Video
+
+{% include youtube.html id="X1jz38QA8Ag" %}
