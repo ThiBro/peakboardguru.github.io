@@ -2,6 +2,10 @@
 
 This guide documents all conventions for writing articles on the Jekyll blog **"Peakboard Guru"**. Follow these rules exactly when creating new posts.
 
+**Language:** All articles are written in **English**.
+
+**Content focus:** Articles describe a **real-world use case** and the business value it delivers. Focus on the problem being solved, who benefits, and the outcome. Do NOT explain Peakboard internals, technical implementation details, or how the dashboard was built step by step.
+
 ---
 
 ## 1. File Naming
@@ -41,13 +45,37 @@ image: /assets/2026-03-03-14-30-00/title.png
 | `title` | Human-readable title. Often uses ` - ` as separator for subtitles |
 | `date` | Format: `YYYY-MM-DD HH:MM:SS +0000` |
 | `tags` | **Space-separated** tag slugs (not a YAML list!). First tag = primary category |
-| `image` | Path to hero image. Pattern: `/assets/YYYY-MM-DD-HH-MM-SS/title.png`. The folder name matches the post's `date:` field with hyphens |
+| `image` | Path to hero image. Pattern: `/assets/YYYY-MM-DD-HH-MM-SS/title.png` (or `title.jpg`). Match the actual file extension. The folder name matches the post's `date:` field with hyphens |
 
-### Optional Fields
+### Recommended Fields
+
+Always include `bg_alternative` and `description` for new posts:
 
 ```yaml
 bg_alternative: true
 description: "One or two sentences summarizing what this article covers."
+downloads:
+  - name: ProjectFile.pbmx
+    url: /assets/2026-03-03-14-30-00/ProjectFile.pbmx
+```
+
+### Multi-Project Downloads
+
+Some articles cover a multi-project system (e.g., an ordering dashboard + a kitchen display). In this case, list **all** project files in the `downloads` field with descriptive names:
+
+```yaml
+downloads:
+  - name: OrderDashboard.pbmx
+    url: /assets/2026-03-03-14-30-00/OrderDashboard.pbmx
+  - name: KitchenDisplay.pbmx
+    url: /assets/2026-03-03-14-30-00/KitchenDisplay.pbmx
+```
+
+Each download gets its own download button in the sidebar. Use meaningful names that describe what each project does.
+
+### Optional Fields
+
+```yaml
 read_more_links:
   - name: Display Text
     url: https://example.com
@@ -60,12 +88,12 @@ downloads:
 
 | Field | Description |
 |-------|-------------|
-| `bg_alternative` | `true` = light hero box style with a semi-transparent text box over the image |
-| `description` | Shown below title in hero area and used for SEO meta tags |
+| `bg_alternative` | `true` = light hero box style with a semi-transparent text box over the image. Always use for new posts |
+| `description` | Shown below title in hero area and used for SEO meta tags. Always include for new posts |
+| `downloads` | List of `{name, url}` rendered as Guru download button images at the top of the right sidebar. For multi-project articles, list each project file separately with a descriptive name. Do NOT add download links in the article body - the buttons are generated automatically from this field |
 | `read_more_links` | List of `{name, url}` shown in sidebar under "Related Links" |
-| `downloads` | List of `{name, url}` rendered as a Guru download button image at the top of the right sidebar. Do NOT add download links in the article body - the button is generated automatically from this field |
 
-### Post Template
+### Post Template (Single Project)
 
 ```yaml
 ---
@@ -79,6 +107,25 @@ description: "Short summary of the article for SEO and hero display."
 downloads:
   - name: SampleProject.pbmx
     url: /assets/2026-03-03-14-30-00/SampleProject.pbmx
+---
+```
+
+### Post Template (Multi-Project)
+
+```yaml
+---
+layout: post
+title: Restaurant Ordering System - Order Kiosk and Kitchen Display
+date: 2026-03-03 00:00:00 +0000
+tags: gastronomy
+image: /assets/2026-03-03-14-30-00/title.jpg
+bg_alternative: true
+description: "A complete restaurant ordering system with a customer-facing kiosk and a kitchen display."
+downloads:
+  - name: OrderKiosk.pbmx
+    url: /assets/2026-03-03-14-30-00/OrderKiosk.pbmx
+  - name: KitchenDisplay.pbmx
+    url: /assets/2026-03-03-14-30-00/KitchenDisplay.pbmx
 ---
 ```
 
@@ -135,12 +182,25 @@ Store images in `/assets/YYYY-MM-DD-HH-MM-SS/` folder matching the post date.
 
 **Naming conventions:**
 - Hero image: `title.png` or `title.jpg` (match the actual file extension)
-- Screenshot: `010.png` - each article has exactly one screenshot, always named `010.png`
+- Screenshot (single project): `010.png` - named `010.png`
+- Screenshots (multi-project): `{ProjectName}_010.png` for each sub-project (e.g., `OrderDashboard_010.png`, `KitchenDisplay_010.png`)
 - Downloadable files (`.pbmx`, `.pbfx`, `.py`, `.txt`) go in the same folder
 
-**Markdown syntax:**
+**Markdown syntax (single project):**
 ```markdown
 ![screenshot](/assets/2026-03-03-14-30-00/010.png)
+```
+
+**Markdown syntax (multi-project):**
+For multi-project articles, show each project's screenshot with a descriptive heading or label:
+```markdown
+## The Order Dashboard
+
+![Order Dashboard](/assets/2026-03-03-14-30-00/OrderDashboard_010.png)
+
+## The Kitchen Display
+
+![Kitchen Display](/assets/2026-03-03-14-30-00/KitchenDisplay_010.png)
 ```
 
 ### Code Blocks
@@ -205,17 +265,22 @@ The URL preserves the exact filename casing (not lowercased). There is no date i
 
 ## 6. Writing Style
 
-- **Voice:** The blog author is "Michelle" - write in first person plural ("we") or instructional second person ("you")
+- **Language:** Always English
+- **Voice:** The blog author is "Thilo" - write in first person plural ("we") or instructional second person ("you")
 - **Tone:** Technical but approachable, sometimes playful/punny titles
 - **Structure:** Problem → Setup → Step-by-step walkthrough → Result/Conclusion
+- **Use-case focus:** Describe the real-world scenario, the problem, and how the dashboard helps. Do NOT describe Peakboard internals or technical implementation
 - **Screenshots:** Heavy use of annotated screenshots showing each configuration step
 - **Practical focus:** Every article typically includes a downloadable `.pbmx` sample project
 - **Download button:** Do NOT add download links as text in the article body. The Guru download button image is rendered automatically in the right sidebar from the `downloads` front matter field
 - **Cross-linking:** Reference related articles and categories using internal links
+- **Punctuation:** Never use em dashes (---) or en dashes (--). Use only regular hyphens (-)
 
 ---
 
-## 7. Complete Example Post
+## 7. Complete Example Posts
+
+### Single-Project Example
 
 ```markdown
 ---
@@ -251,6 +316,46 @@ The application uses two Peakboard lists as its data backbone.
 The finished dashboard provides an at-a-glance overview of the schedule.
 ```
 
+### Multi-Project Example
+
+```markdown
+---
+layout: post
+title: Restaurant Ordering System - Customer Kiosk and Kitchen Display
+date: 2026-03-03 00:00:00 +0000
+tags: gastronomy
+image: /assets/2026-03-03-14-30-00/title.jpg
+bg_alternative: true
+description: "A two-part restaurant system with a self-service ordering kiosk and a real-time kitchen display."
+downloads:
+  - name: OrderKiosk.pbmx
+    url: /assets/2026-03-03-14-30-00/OrderKiosk.pbmx
+  - name: KitchenDisplay.pbmx
+    url: /assets/2026-03-03-14-30-00/KitchenDisplay.pbmx
+---
+<video width="100%" controls><source src="{{ site.baseurl }}/assets/2026-03-03-14-30-00/video.mp4" type="video/mp4"></video>
+
+Managing orders in a busy restaurant can be chaotic. This two-part system
+connects a customer-facing ordering kiosk with a kitchen display that
+shows incoming orders in real time.
+
+## The Order Kiosk
+
+Customers browse the menu and place orders directly on a touchscreen.
+
+![Order Kiosk](/assets/2026-03-03-14-30-00/OrderKiosk_010.png)
+
+## The Kitchen Display
+
+As orders come in, they appear on the kitchen screen sorted by time.
+
+![Kitchen Display](/assets/2026-03-03-14-30-00/KitchenDisplay_010.png)
+
+## Result
+
+The two dashboards work together to streamline the ordering process.
+```
+
 ---
 
 ## 8. Checklist Before Publishing
@@ -265,4 +370,6 @@ The finished dashboard provides an at-a-glance overview of the schedule.
 - [ ] Internal links use `/Title-Slug.html` format (no date in URL)
 - [ ] Images are in `/assets/YYYY-MM-DD-HH-MM-SS/` folder
 - [ ] Article ends with a `## Result` or `## Conclusion` section
-- [ ] Download link is in `downloads:` front matter only (not as text in the article body)
+- [ ] Download link(s) in `downloads:` front matter only (not as text in the article body)
+- [ ] For multi-project articles: all project files listed in `downloads:` with descriptive names
+- [ ] For multi-project articles: each project has its own screenshot shown in the article body

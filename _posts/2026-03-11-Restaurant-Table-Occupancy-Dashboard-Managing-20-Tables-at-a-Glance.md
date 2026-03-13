@@ -4,7 +4,7 @@ title: "Restaurant Table Occupancy Dashboard - Managing 20 Tables at a Glance"
 date: 2026-03-11 00:00:00 +0000
 tags: gastronomy
 image: /assets/2026-03-11-15-12-57/title.jpg
-image_header: /assets/2026-03-11-15-12-57/title_landscape.jpg
+image_header: /assets/2026-03-11-15-12-57/title.jpg
 bg_alternative: true
 description: "A color-coded touchscreen dashboard helps restaurant hosts manage table occupancy, reservations, and seating across four dining areas in real time."
 downloads:
