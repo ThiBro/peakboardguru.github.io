@@ -19,6 +19,8 @@ lang: en
 permalink: /en/hotel-restaurant-guide/
 translation_url: /de/hotel-restaurant-guide/
 ---
+{% include youtube.html id="Hh63U-C8ZdI" %}
+
 
 Every hotel lobby seems to have one: a printed sheet of paper taped to the wall or slipped into a plastic stand, listing the best restaurants in the neighborhood. It looked great the day it was printed, but a year later half the places have changed their opening hours, one has closed, and the newest gem in town is not on it at all. Nobody wants to reprint it, so it quietly grows stale.
 

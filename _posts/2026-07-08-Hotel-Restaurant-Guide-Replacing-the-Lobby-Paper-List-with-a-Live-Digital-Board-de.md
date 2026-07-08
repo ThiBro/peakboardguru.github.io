@@ -20,6 +20,8 @@ lang: de
 permalink: /de/hotel-restaurant-guide/
 translation_url: /en/hotel-restaurant-guide/
 ---
+{% include youtube.html id="YvcCRb4V-qI" %}
+
 
 In fast jeder Hotellobby findet man es: ein gedrucktes Blatt Papier, an die Wand geklebt oder in einen Plastikständer geschoben, das die besten Restaurants der Umgebung auflistet. Am Tag des Ausdrucks sah es noch tadellos aus – doch ein Jahr später hat die Hälfte der Lokale ihre Öffnungszeiten geändert, eines hat geschlossen, und der neueste Geheimtipp der Stadt taucht überhaupt nicht auf. Neu ausdrucken will es niemand, und so veraltet es still vor sich hin.
 
