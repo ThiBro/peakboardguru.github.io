@@ -154,12 +154,14 @@ layout: base
                         {% if page.downloads %}
                         <div class="break-words min-w-0">
                             {% for dl in page.downloads %}
-                            <a href="{{ dl.url | relative_url }}" download class="block hover:scale-105 transition-transform duration-200 {% if dl.url contains '.pbmx' %}mb-2{% else %}mb-5{% endif %} text-center">
-                                <img src="{{ '/assets/img/download-button.png' | relative_url }}" alt="{% if _lang == 'de' %}{{ dl.name }} herunterladen{% else %}Download {{ dl.name }}{% endif %}" loading="lazy" width="1536" height="1024" style="width: 100%; height: auto;">
-                                {% if page.downloads.size > 1 %}
-                                <span class="block mt-1 text-xs font-medium text-gray-600 dark:text-gray-400">{{ dl.name | split: '.' | first }}</span>
-                                {% endif %}
+                            <a href="{{ dl.url | relative_url }}" download
+                               class="block hover:scale-105 transition-transform duration-200 {% if dl.url contains '.pbmx' %}mb-2{% else %}mb-5{% endif %} py-2.5 px-4 text-center font-heading text-sm font-bold uppercase tracking-widest"
+                               style="color: #fff; border-radius: .5rem; background: linear-gradient(90deg, #F0A030, #c97f1d);">
+                                {% if _lang == 'de' %}Herunterladen{% else %}Download{% endif %}
                             </a>
+                            {% if page.downloads.size > 1 %}
+                            <span class="block mt-1 mb-2 text-xs font-medium text-center text-gray-600 dark:text-gray-400">{{ dl.name | split: '.' | first }}</span>
+                            {% endif %}
                             {% if dl.url contains '.pbmx' %}
                             {%- comment -%} The runtime server (templates.peakboard.rocks) serves each
                             project under its asset folder name (/assets/<slug>/Peakboard.pbmx). {%- endcomment -%}
