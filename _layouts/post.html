@@ -154,26 +154,25 @@ layout: base
                         {% if page.downloads %}
                         <div class="break-words min-w-0">
                             {% for dl in page.downloads %}
-                            <a href="{{ dl.url | relative_url }}" download
-                               class="block hover:scale-105 transition-transform duration-200 {% if dl.url contains '.pbmx' %}mb-2{% else %}mb-5{% endif %} py-2.5 px-4 text-center font-heading text-sm font-bold uppercase tracking-widest"
-                               style="color: #fff; border-radius: .5rem; background: linear-gradient(90deg, #F0A030, #c97f1d);">
-                                {% if _lang == 'de' %}Herunterladen{% else %}Download{% endif %}
-                            </a>
-                            {% if page.downloads.size > 1 %}
-                            <span class="block mt-1 mb-2 text-xs font-medium text-center text-gray-600 dark:text-gray-400">{{ dl.name | split: '.' | first }}</span>
-                            {% endif %}
-                            {% if dl.url contains '.pbmx' %}
-                            {%- comment -%} The runtime server (templates.peakboard.rocks) serves each
-                            project under its asset folder name (/assets/<slug>/Peakboard.pbmx). {%- endcomment -%}
-                            {% assign live_parts = dl.url | split: '/' %}
-                            {% assign live_index = live_parts.size | minus: 2 %}
-                            <a href="https://templates.peakboard.rocks/{{ live_parts[live_index] }}/index"
-                               target="_blank" rel="noopener"
-                               class="block mb-5 py-2.5 px-4 text-center font-heading text-sm font-bold uppercase tracking-widest hover:scale-105 transition-transform duration-200"
-                               style="color: #fff; border-radius: .5rem; background: linear-gradient(90deg, #F0A030, #c97f1d);">
-                                {% if _lang == 'de' %}Live testen{% else %}Live test{% endif %}
-                            </a>
-                            {% endif %}
+                            <div class="flex items-center gap-2 mb-3 py-2 px-3"
+                                 style="border-radius: .5rem; background: linear-gradient(90deg, #F0A030, #c97f1d);">
+                                <span class="flex-1 min-w-0 truncate font-heading text-sm font-bold" style="color: #fff;" title="{{ dl.name }}">{{ dl.name | split: '.' | first }}</span>
+                                <a href="{{ dl.url | relative_url }}" download
+                                   class="shrink-0 flex items-center justify-center w-9 h-9 text-lg hover:scale-110 transition-transform duration-200"
+                                   style="color: #fff; border-radius: .4rem; background: rgba(255,255,255,.18);"
+                                   title="{% if _lang == 'de' %}{{ dl.name }} herunterladen{% else %}Download {{ dl.name }}{% endif %}">&#11015;</a>
+                                {% if dl.url contains '.pbmx' %}
+                                {%- comment -%} The runtime server (templates.peakboard.rocks) serves each
+                                project under its asset folder name (/assets/<slug>/Peakboard.pbmx). {%- endcomment -%}
+                                {% assign live_parts = dl.url | split: '/' %}
+                                {% assign live_index = live_parts.size | minus: 2 %}
+                                <a href="https://templates.peakboard.rocks/{{ live_parts[live_index] }}/index"
+                                   target="_blank" rel="noopener"
+                                   class="shrink-0 flex items-center justify-center w-9 h-9 text-lg hover:scale-110 transition-transform duration-200"
+                                   style="color: #fff; border-radius: .4rem; background: rgba(255,255,255,.18);"
+                                   title="{% if _lang == 'de' %}Live testen{% else %}Live test{% endif %}">&#9654;</a>
+                                {% endif %}
+                            </div>
                             {% endfor %}
                         </div>
                         {% endif %}
