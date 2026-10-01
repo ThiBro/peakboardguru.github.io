@@ -18,6 +18,8 @@ lang: de
 permalink: /de/line-3-product-changeover-guide-guiding-operators-through-every-mold-change/
 translation_url: /en/line-3-product-changeover-guide-guiding-operators-through-every-mold-change/
 ---
+{% include youtube.html id="CA25RBCnpd0" %}
+
 An einer Spritzgießlinie gehört der Produktwechsel zu den teuersten Momenten einer Schicht. Die Presse steht, das Werkzeug wird ausgebaut, ein anderes eingebaut – und anschließend müssen Material, Programm, Robotergreifer und Etiketten auf das nächste Produkt umgestellt werden. Jede Minute Stillstand kostet Geld. Kleine Probleme summieren sich schnell: Eine fehlende Kupplung, ein Kran, der gerade anderswo gebraucht wird, oder Probeschüsse, die durch die Prüfung fallen – und schon wird aus einem geplanten 50-Minuten-Wechsel mehr als eine Stunde Stillstand. In diesem Artikel stellen wir eine Anwendung vor, die Bediener durch den gesamten Produktwechsel führt. Kein Schritt wird übersprungen, jede Störung wird mit Ursache erfasst, und die Linie läuft erst wieder an, wenn die Qualitätssicherung freigegeben hat.
 
 ![Einführung in den Rüstassistenten für Linie 3](/assets/2026-10-01-11-31-45/intro_frame.png)

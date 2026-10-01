@@ -18,6 +18,8 @@ lang: en
 permalink: /en/line-3-product-changeover-guide-guiding-operators-through-every-mold-change/
 translation_url: /de/line-3-product-changeover-guide-guiding-operators-through-every-mold-change/
 ---
+{% include youtube.html id="VYLGxvVnokQ" %}
+
 On an injection molding line, a changeover is one of the most expensive moments in a shift. The press stops and the mold comes out. A different mold goes in, and then material, program, robot gripper and labels all have to switch to the next product. Every minute of standstill costs money. Small problems add up quickly: a missing coupling, a crane that is busy elsewhere, or trial shots that fail inspection can turn a planned 50-minute changeover into more than an hour of downtime. In this article we look at an application that guides operators through the whole changeover. Nothing gets skipped, every disruption is recorded with a reason, and the line restarts only after quality has signed off.
 
 ![Line 3 changeover guide intro](/assets/2026-10-01-11-31-45/intro_frame.png)
