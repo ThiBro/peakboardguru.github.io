@@ -12,16 +12,15 @@ jobs:
       pull-requests: write
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Compress Images
         id: compress
         uses: calibreapp/image-actions@1.1.0
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
-          compressOnly: true
       - name: Create New Pull Request If Needed
         if: steps.compress.outputs.markdown != ''
-        uses: peter-evans/create-pull-request@v4
+        uses: peter-evans/create-pull-request@v7
         with:
           title: Compressed Images Nightly
           branch-suffix: timestamp
